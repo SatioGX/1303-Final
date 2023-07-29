@@ -6,9 +6,8 @@ class Program
     {
         Random random = new Random();
         int playerLevel = 3;
-        int diceRoll = random.Next(1, 7); // Random dice roll between 1 and 6
+        int diceRoll = random.Next(1, 7);
 
-        // Instantiate the weapon objects
         Weapon sword = new Weapon("Sword", 3);
         Weapon arrow = new Weapon("Arrow", 2);
         Weapon crossbow = new Weapon("Crossbow", 2.5);
@@ -16,7 +15,6 @@ class Program
         Weapon dagger = new Weapon("Dagger", 2);
         Weapon staff = new Weapon("Staff", 1);
 
-        // Calculate and display the damage for each weapon
         Console.WriteLine($"Player Level: {playerLevel}");
         Console.WriteLine($"Dice Roll: {diceRoll}\n");
         Console.WriteLine($"Sword Damage: {sword.CalculateDamage(playerLevel, diceRoll)}");
