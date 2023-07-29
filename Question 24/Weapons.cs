@@ -24,7 +24,6 @@ namespace Question_24
             double damage = BaseDamage;
             double damageIncreasePercentage = 0;
 
-            // Check if the weapon can become magical
             if ((Name == "Sword" || Name == "Staff" || Name == "Dagger") && playerLevel >= 2)
             {
                 if (playerLevel == 2)
@@ -37,7 +36,6 @@ namespace Question_24
                     damageIncreasePercentage += 1.0;
             }
 
-            // Apply dice roll damage increase
             switch (diceRoll)
             {
                 case 2:
@@ -59,7 +57,6 @@ namespace Question_24
                     break;
             }
 
-            // Calculate total damage
             damage *= (1 + damageIncreasePercentage);
 
             return damage;
